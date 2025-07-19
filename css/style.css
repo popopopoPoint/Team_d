@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body {
+    /* font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; */
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.1em;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-title h2{
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size:1rem;
+    color: #006666;
+}
+.section-title p{
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size:0.75rem;
+    color: #F698E0;
+}
+
+section{
+    padding-block:100px;
+    background-color: #F8F6F3;
+}
+
+/* ---header-------------- */
+/* ---about---------------- */
+/* ---how----------------- */
+/* ---voice----------------*/
+/* ---event--------------- */
+/* ---footer-------------- */
