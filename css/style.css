@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 body {
     /* font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; */
     font-family: "Noto Sans JP", sans-serif;
@@ -29,27 +30,196 @@ a {
     width: 100%;
 }
 
-.section-title h2{
+.section-title h2 {
     font-family: "futura-pt", sans-serif;
     font-weight: 700;
-    font-size:1rem;
+    font-size: 1rem;
     color: #006666;
 }
-.section-title p{
+
+.section-title p {
     font-family: "futura-pt", sans-serif;
     font-weight: 700;
-    font-size:0.75rem;
+    font-size: 0.75rem;
     color: #F698E0;
 }
 
-section{
-    padding-block:100px;
+section {
+    padding-block: 100px;
     background-color: #F8F6F3;
 }
 
 /* ---header-------------- */
-/* ---about---------------- */
+/* ---about----------------*/
 /* ---how----------------- */
 /* ---voice----------------*/
 /* ---event--------------- */
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-list {
+    width: 70%;
+}
+
+.event-item {
+    display: flex;
+    border-bottom: 1px solid;
+    padding: 30px 20px;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #006666;
+}
+
+.event-item:hover {
+    background-color: #ffffff;
+}
+
+.event-info {
+    margin-right: 70px;
+    text-align: center;
+}
+
+.event-date {
+    margin-bottom: 10px;
+}
+
+.event-info span {
+    background-color: #F698E0;
+    color: #F8F6F3;
+    font-size: 0.75rem;
+    display: block;
+    padding: 3px;
+
+}
+
+.event-text {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 10rem;
+    color: #fffccd;
+    font-weight: 700;
+}
+
+.slide-text {
+    display: inline-block;
+    animation: slide 50s linear infinite;
+    /* アニメーション設定 */
+}
+
+.slide {
+    display: inline-block;
+
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* テキストの幅だけ移動 */
+    }
+}
+
+.event-btn {
+    background-color: #006666;
+    width: 200px;
+    border-radius: 25px;
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    margin: 0 auto;
+    margin-top: 40px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.event-btn::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: solid 3px #fff;
+    border-right: solid 3px #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+.event-btn a {
+    color: #fff;
+    padding: 15px 10px;
+}
+
+
 /* ---footer-------------- */
+
+footer {
+    background-color: #F8F6F3;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 50px 0 30px 0;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer nav li {
+    padding: 10px;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.instagram-icon {
+    display: flex;
+    margin-top: 20px;
+
+}
+
+.kakashi {
+    margin-right: 40px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.iruka {
+    text-align: center;
+    font-weight: 100;
+}
+
+
+.instagram {
+    background-color: #F698E0;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+
+
+}
+
+footer ul li img {
+    width: 50px;
+}
+
+.logo {
+    width: 250px;
+    object-fit: cover;
+}
+
+.copy {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 50px;
+}
