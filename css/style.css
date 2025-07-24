@@ -1,11 +1,8 @@
 @charset "UTF-8";
+
 body {
-    /* font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; */
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 0.1em;
 }
 
 img {
@@ -23,33 +20,419 @@ a {
     display: inline-block;
 }
 
+p {
+    line-height: 1.6;
+    letter-spacing: 0.12em;
+}
+
 .wrapper {
     max-width: 900px;
     margin: 0 auto;
     width: 100%;
 }
 
-.section-title h2{
-    font-family: "futura-pt", sans-serif;
-    font-weight: 700;
-    font-size:1rem;
-    color: #006666;
+.section-title {
+    margin-bottom: 40px;
 }
-.section-title p{
+
+.section-title h2 {
     font-family: "futura-pt", sans-serif;
     font-weight: 700;
-    font-size:0.75rem;
+    font-size: 2.1rem;
+    color: #006666;
+    letter-spacing: 0.03em;
+}
+
+.section-title p {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
     color: #F698E0;
 }
 
-section{
-    padding-block:100px;
+section {
+    padding-block: 100px;
     background-color: #F8F6F3;
 }
 
 /* ---header-------------- */
-/* ---about---------------- */
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F8F6F3;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    padding-inline: 40px;
+}
+
+h1 {
+    border-right: 2px solid #000000;
+    align-items: center;
+}
+
+h1 img {
+    width: 170px;
+}
+
+h1 a {
+    padding-right: 40px;
+
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul li {
+    margin-left: 8px;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    width: 120px;
+}
+
+/* ---mainvisual---------- */
+/* .main-visual {
+    height: 80vh;
+    margin: 3vw 5vw;
+    position: relative;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/background.png);
+    background-repeat: repeat;
+    position: absolute;
+    z-index: 0;
+}
+
+.mv-texts {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    text-align: center;
+    font-family: "Cabin", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    position: absolute;
+}
+
+.mv-texts .main-text {
+    margin-left: 50px;
+    font-size: 5rem;
+    color: #006666;
+}
+
+.mv-texts .sub-text {
+    font-size: 2.25rem;
+    color: #F698E0;
+}
+
+.bg-text-items {
+    margin-top: 12vh;
+}
+
+.bg-text-item {
+    height: 21vh;
+    background: url(../img/bgtop-text-metaleaf.png) left top repeat-x;
+    z-index: 10;
+} */
+
+/* ---about--------------- */
 /* ---how----------------- */
 /* ---voice----------------*/
+.voice {
+    border-block: 1.5px solid #000000;
+    background-image: url(../img/background.png);
+    background-position: center;
+    background-repeat: repeat;
+}
+
+
+li.voice-item {
+    margin: 0 auto;
+    padding: 6%;
+    width: 60%;
+    position: relative;
+    transition: 0.2s linear;
+}
+
+li.voice-item:hover {
+    rotate: -2deg;
+    transform: translateY(2%);
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background-color: #fff;
+    border: 1.5px solid #000;
+    padding: 30px;
+    width: 6%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    position: absolute;
+    border: transparent solid 10px;
+    border-left: solid 5p;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: #000;
+    z-index: 100;
+}
+
+.slick-prev {
+    left: 29%
+}
+
+.slick-next {
+    right: 29%
+}
+
+.voice-num {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    font-size: 0.875rem;
+    letter-spacing: 0.5em;
+    text-align: right;
+    border-top: 1.5px solid #000000;
+    border-inline: 1.5px solid #000000;
+}
+
+.voice-flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border: 1.5px solid #000000;
+    padding: 50px 55px;
+}
+
+.voice-item-left {
+    width: 48%;
+}
+
+.voice-item-left h3 {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 600;
+    color: #006666;
+    letter-spacing: 0.03em;
+}
+
+.voice-item-left .voice-text {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+}
+
+.voice-item-right {
+    width: 40%;
+}
+
+.voice-item-right .item-img {
+    position: relative;
+    z-index: 1;
+}
+
+.voice-item-right .item-img img {
+    border: 1.5px solid #000000;
+}
+
+.voice-item-right .item-img::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background-color: #fdf3c1;
+    z-index: -1;
+    border: 1.5px solid #000000;
+}
+
+.voice-item-right .item-name {
+    font-size: 0.75rem;
+    margin-block: 20px
+}
+
 /* ---event--------------- */
+
 /* ---footer-------------- */
+
+
+
+
+/* ---howtouse-page------- */
+.howto-main {
+    height: 90vh;
+    text-align: center;
+    padding-block: 150px;
+    position: relative;
+}
+
+.howto-main h2 {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: #006666;
+    letter-spacing: 0.03em;
+}
+
+.howto-main p {
+    margin-bottom: 40px;
+    line-height: 2em;
+}
+
+.bg-icon-howtouse {
+    height: 15vh;
+    width: 100%;
+    bottom: 150px;
+    background: url(../img/bg-text-howtouse.png) left top repeat-x;
+    position: absolute;
+    z-index: 1;
+}
+
+.bg-icon-howtouse {
+    display: flex;
+}
+
+.bg-icon-howtouse ul {
+    display: flex;
+    margin-bottom: 0;
+    padding-right: 100px;
+}
+
+.bg-icon-howtouse li {
+    width: 80px;
+    padding-right: 40px;
+}
+
+.bg-icon-howtouse img {
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+}
+
+.howto-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 200px;
+}
+
+.howto-items li:nth-child(2),
+.howto-items li:nth-child(4),
+.howto-items li:nth-child(6) {
+    flex-direction: row-reverse;
+}
+
+li .howto-item-left {
+    width: 45%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+li .howto-item-left::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: #fdf3c1;
+    z-index: -1;
+    border: 1.5px solid #000000;
+}
+
+li .howto-item-left {
+    width: 45%;
+}
+
+li .howto-item-right {
+    width: 45%;
+}
+
+li .howto-item-title {
+    display: flex;
+    flex-direction: column;
+    /* 縦に並べる */
+    align-items: flex-start;
+    width: fit-content;
+    /* 横幅を中身サイズに */
+}
+
+li .howto-item-right .howto-item-subtitle {
+    display: inline;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    padding: 2px 15px;
+    background-color: #F698E0;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-bottom: none;
+}
+
+li .howto-item-right .howto-item-maintitle {
+    display: inline;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    box-shadow: 5px 5px 0px 2px #006666;
+}
+
+li .howto-item-right .howto-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.btn-back {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    padding: 10px 30px;
+    border: 1.5px solid #000000;
+    letter-spacing: 0.5em;
+    font-size: 1.25rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+.btn-back span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #333;
+    border-top: 2px solid #333;
+    transform: rotate(45deg);
+    margin-inline: 10px -10px;
+    margin-bottom: 2px;
+}
+
+.btn-back:hover {
+    transform: scale(1.05);
+}
