@@ -234,6 +234,7 @@ header ul li {
 .mv-text h1 {
   color: #006666;
   text-shadow: 1px 1px 2px gray;
+  border-right: none;
 }
 .mv-text p {
   font-size: 1.5rem;
@@ -243,32 +244,42 @@ header ul li {
 /* } */
 
 /* ---about---------------- */
+.about {
+  padding-bottom: 0;
+  border-block: 1.5px solid #000000;
+  background-image: url(../img/background.png);
+  background-position: center;
+  background-repeat: repeat;
+}
 .about-text {
-  max-width: 220px;
-  padding-block: 10px 80px;
+  max-width: 353px;
+  padding-block: 10px 100px;
 }
 .about-text p {
   padding-top: 25px;
-  font-size: 0.75rem;
+  font-size: 1.1rem;
 }
-.meta-link:hover {
+.meta-link{
   font-family: "futura-pt", sans-serif;
   font-weight: 700;
   color: #006666;
+}
+.meta-link:hover {
   transform: scale(1.05);
   cursor: pointer;
+  background: linear-gradient(transparent 70%, #f698e0 50%);
 }
 .about-content{
   display: flex;
   justify-content: space-between;
+  padding-bottom: 80px;
 }
 .about-decolation{
   display: block;
   width: 50%;
   position: relative;
-  padding-bottom: 60px;
 }
-.cercle{
+.circle{
   width: 200px;
   height: 120px;
   background: rgb(229, 229, 229);
@@ -296,7 +307,7 @@ header ul li {
 .scroll-infinity_wrap {
   display: flex;
   overflow: hidden;
-  border: 1px solid red;
+  background-color: #F8F6F3;
 }
 .scroll-infinity_list {
   display: flex;
@@ -319,10 +330,6 @@ header ul li {
   padding-top: 20px;
   width: 130px;
   font-size: 0.8rem;
-}
-
-.about {
-  padding-bottom: 0;
 }
 
 /* ---how----------------- */
@@ -366,10 +373,6 @@ header ul li {
   top: 20%;
   left: 14%;
 }
-/* .speech_bubble1,
-.speech_bubble2{
-  font-size: 0.1rem;
-} */
 }
 .speech_bubble1 {
   font-family: "futura-pt", sans-serif;
@@ -452,6 +455,7 @@ header ul li {
   transform: scale(1.12);
 }
 .how-text {
+  font-family: "futura-pt", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   text-align: center;
@@ -469,7 +473,7 @@ header ul li {
 }
 .arrow-right {
   position: relative;
-  padding-right: 30px;
+  padding-right: 25px;
 }
 .arrow-right::after {
   /* くの字の表示設定 */
@@ -535,7 +539,7 @@ header ul li {
 }
 .arrow-right {
   position: relative;
-  padding-right: 30px;
+  padding-right: 25px;
 }
 .arrow-right::after { 
   content: "";
@@ -881,6 +885,7 @@ footer ul li img {
     font-size: 10px;
     margin-top: 50px;
 }
+
 /* ---howtouse-page------- */
 .howto-main {
     height: 90vh;
