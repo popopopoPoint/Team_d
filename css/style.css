@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    font-family: "Noto Sans JP", "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
+    font-family: Roboto, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, 游ゴシック, YuGothic, sans-serif;
     font-optical-sizing: auto;
 }
 
@@ -37,16 +37,12 @@ p {
 }
 
 .section-title h2 {
-    font-family: "futura-pt", sans-serif;
-    font-weight: 700;
     font-size: 2.1rem;
     color: #006666;
     letter-spacing: 0.03em;
 }
 
 .section-title p {
-    font-family: "futura-pt", sans-serif;
-    font-weight: 700;
     font-size: 0.75rem;
     color: #F698E0;
 }
@@ -89,11 +85,75 @@ header ul {
 
 header ul li {
     margin-left: 8px;
-    font-family: "futura-pt", sans-serif;
     font-weight: 700;
     font-size: 1.3rem;
     width: 120px;
 }
+
+/* ---mainvisual---------- */
+    .mv{
+        height: 85vh;
+        background-image: url(../img/mv-bg-ground.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-bottom: 1.5px solid #000;
+    }
+    .mv-frame{
+        position: relative;
+        margin: auto;
+        box-sizing: content-box;
+        max-width: 1100px;
+        padding-right: 80px;
+        padding-left: 80px;
+        /* background-color: #fff;
+        opacity: 0.7;
+        border-radius: 50px; */
+    }
+    .mv-text{
+        padding-top: 164px;
+        width: 45.2%;
+        text-shadow: 2px 2px 10 #fff, -2px -2px 10 #fff;
+    }
+    .mv-text span{
+        color: #006666;
+    }
+    .mv-text h2{
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        margin-bottom: 30px;
+        line-height: 1.5;
+        font-size: 2.5rem;
+    }
+    .mv-text p{
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+    .mv-img{
+        position: absolute;
+        right: -27px;
+        top: 136px;
+        width: 50.3%;
+    }
+    .mv-img video{
+        position: absolute;
+        width: 82%;
+        left: 13px;
+        top: 18px;
+    }
+    .mv-img .img-1{
+    position: absolute;
+    left: 50px;
+    bottom: -30px;
+    width: 140px;
+    }
+    .mv-img .img-2{
+        position: absolute;
+        right: -40px;
+        bottom: 40px;
+        width: 140px;
+    }
 
 /* ---mainvisual---------- */
 /* .main-visual {
@@ -149,7 +209,7 @@ header ul li {
 
 
 
-/* ---mv-------------- */
+/* ---mv--------------
 .mv-frame {
   display: block;
   opacity: 0.5;
@@ -180,7 +240,7 @@ header ul li {
   color: #f698e0;
   text-shadow: 1px 1px 2px white;
   /* color: #006666; */
-}
+/* } */
 
 /* ---about---------------- */
 .about-text {
@@ -820,7 +880,7 @@ footer ul li img {
     text-align: center;
     font-size: 10px;
     margin-top: 50px;
-
+}
 /* ---howtouse-page------- */
 .howto-main {
     height: 90vh;
