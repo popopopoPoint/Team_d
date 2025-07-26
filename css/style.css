@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
 body {
+
   font-family: "futura-pt", "Noto Sans JP", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, 游ゴシック, YuGothic, sans-serif;
+
+
   font-optical-sizing: auto;
 }
 
@@ -18,6 +21,7 @@ a {
   display: inline-block;
 }
 p {
+
   letter-spacing: 0.21em;
   line-height: 2.1em;
   color: #333;
@@ -27,9 +31,13 @@ p {
 
 .wrapper {
   max-width: 1100px;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
   margin: 0 auto;
   width: 100%;
 }
+
+
 
 /*----fade-------------- */
 .fadein{  /* 下から出現 */
@@ -56,7 +64,8 @@ p {
   font-size: 14rem;
   color: #fffccd;
   font-weight: 700;
-}
+
+
 .slide-text {
   display: inline-block;
   animation: slide 50s linear infinite;
@@ -85,7 +94,6 @@ p {
 .section-title h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  font-size: 2.1rem;
   color: #006666;
   letter-spacing: 0.03em;
 }
@@ -101,6 +109,10 @@ section {
   font-weight: 700;
   font-size: 0.75rem;
   color: #f698e0;
+}
+
+section {
+  padding-block: 100px;
   background-color: #f8f6f3;
 }
 
@@ -201,7 +213,6 @@ header ul {
 
 header ul li {
   margin-left: 8px;
-  font-weight: 700;
   font-size: 1.3rem;
   width: 120px;
 }
@@ -286,92 +297,6 @@ header ul li {
   width: 140px;
 }
 
-/* ---mainvisual---------- */
-.main-visual {
-    height: 80vh;
-    margin: 3vw 5vw;
-    position: relative;
-}
-
-.inner {
-    width: 100%;
-    height: 100%;
-    border: 1.5px solid #000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url(../img/background.png);
-    background-repeat: repeat;
-    position: absolute;
-    z-index: 0;
-}
-
-.mv-texts {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-    text-align: center;
-    font-family: "Cabin", sans-serif;
-    font-weight: bold;
-    letter-spacing: 0.15em;
-    position: absolute;
-}
-
-.mv-texts .main-text {
-    margin-left: 50px;
-    font-size: 5rem;
-    color: #006666;
-}
-
-.mv-texts .sub-text {
-    font-size: 2.25rem;
-    color: #F698E0;
-}
-
-.bg-text-items {
-    margin-top: 12vh;
-}
-
-.bg-text-item {
-    height: 21vh;
-    background: url(../img/bgtop-text-metaleaf.png) left top repeat-x;
-    z-index: 10;
-}
-
-/* ---mv-------------- */
-/* .mv-frame {
-  display: block;
-  opacity: 0.5;
-  max-width: 1000px;
-  margin: 0 auto;
-  border: 1.5px solid black;
-}
-.mv {
-  position: relative;
-}
-.mv-text {
-  text-align: center;
-  font-family: "futura-pt", sans-serif;
-  font-size: 3rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  font-weight: 700;
-}
-.mv-text h1 {
-  color: #006666;
-  text-shadow: 1px 1px 2px gray;
-  border-right: none;
-}
-.mv-text p {
-  font-size: 1.5rem;
-  color: #f698e0;
-  text-shadow: 1px 1px 2px white;
-  /* color: #006666; */
-/* } */
-
 /* ---about---------------- */
 .about {
   padding-bottom: 0;
@@ -406,17 +331,12 @@ header ul li {
   padding-bottom: 80px;
 }
 
-.about-decolation {
-  display: block;
-  width: 50%;
-  position: relative;
-}
-
 .about-img {
   width: 500px;
   padding-bottom: 20px;
   /* border: 3px solid yellowgreen; */
 }
+
 .circle {
   width: 200px;
   height: 120px;
@@ -499,8 +419,6 @@ header ul li {
 .scroll-infinity_wrap {
   display: flex;
   overflow: hidden;
-  background-color: #F8F6F3;
-  padding-block: 10px 0px;
 }
 
 .scroll-infinity_list {
@@ -690,6 +608,7 @@ li.voice-item {
   transform: translateY(-5%);
   position: relative;
 }
+
 .slick-active:hover {
   rotate: -2deg;
   transform: translateY(-3%);
@@ -702,6 +621,33 @@ max-width: 104px;
 height: 64px ;
 position: absolute;
 z-index: 100;
+
+.btn-text:nth-child(2) {
+  top: -100%;
+}
+.btn:hover .btn-text:nth-child(1) {
+  top: 100%;
+}
+.btn:hover .btn-text:nth-child(2) {
+  top: 0;
+}
+.btn-text-img2 {
+    width: 130px;
+    padding-bottom: 6px;
+} */
+
+/* ---voice----------------*/
+.voice {
+  border-block: 1.5px solid #000000;
+  background-image: url(../img/background.png);
+  background-position: center;
+  background-repeat: repeat;
+}
+
+li.voice-item {
+  margin: 0 auto;
+  padding: 6%;
+  width: 60%;
   position: relative;
   transition: 0.2s linear;
 }
@@ -778,7 +724,6 @@ li.voice-item:hover {
 }
 .voice-item-left .voice-text {
   font-size: 0.75rem;
-  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -805,7 +750,7 @@ li.voice-item:hover {
 }
 .voice-item-right .item-name {
   font-size: 0.75rem;
-  margin-block: 20px
+  margin-block: 20px;
 }
 
 /* ---event--------------- */
@@ -1098,3 +1043,4 @@ li .howto-item-right .howto-text {
 .howto-items .slide-wrap{
   padding-top:50px;
 }
+
