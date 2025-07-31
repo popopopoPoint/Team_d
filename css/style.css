@@ -256,13 +256,22 @@ header {
   background-color: #f8f6f3;
   border-top: 2px solid #000000;
   border-bottom: 2px solid #000000;
-  padding-inline: 40px;
+  /* padding-inline: 40px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  align-items: center;
 }
 
 h1 {
   display: flex;
   align-items: center;
-  border-right: 2px solid #000000;
+  height: 90px;
+  border-right: 2px solid #000;
+  padding-inline: 40px;
+
 }
 
 h1 img {
@@ -272,6 +281,13 @@ h1 img {
 h1 a {
   padding-right: 40px;
   line-height: 1;
+}
+
+header nav {
+  align-items: center;
+  text-align: right;
+  margin-left: auto;
+  padding-right: 50px;
 }
 
 header ul {
@@ -287,7 +303,94 @@ header ul li {
 }
 
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+
+  h1 {
+    border-right: none;
+  }
+
+  nav {
+    width: 100%;
+    height: 75vh;
+    background: #f8f6f3f1;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    opacity: 0;
+    overflow-y: auto;
+    transition: 0.5s;
+    z-index: 20;
+    text-align: center;
+    visibility: hidden;
+
+  }
+
+  .open nav {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav ul {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    padding: 35px 0;
+    text-align: center;
+  }
+
+  .toggle_btn {
+    width: 40px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    z-index: 20;
+    margin-right: 30px;
+  }
+
+  .toggle_btn span {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #333;
+    transition: .5s;
+    position: absolute;
+  }
+
+  .toggle_btn span:nth-child(1) {
+    top: 28px;
+  }
+
+  .toggle_btn span:nth-child(2) {
+    top: 38px;
+  }
+
+  .toggle_btn span:nth-child(3) {
+    top: 48px;
+  }
+
+  .open .toggle_btn span {
+    background-color: #333;
+  }
+
+  .open .toggle_btn span:nth-child(1) {
+    transform: translateY(5px) rotate(-45deg);
+  }
+
+  .open .toggle_btn span:nth-child(2) {
+    transform: translateY(-5px) rotate(45deg);
+  }
+
+  .open .toggle_btn span:nth-child(3) {
+    opacity: 0;
+    padding-right: 40px;
+  }
+
+}
 
 /*---mainvisual---------- */
 .mv {
@@ -883,13 +986,13 @@ header ul li {
     font-size: 0.55rem;
     margin-block: 20px;
   }
+  
   .slick-prev{
     margin-left: 20px;
   }
   .slick-next{
     margin-right: 15px;
   }
-
 }
 
 /* ---event--------------- */
@@ -1118,6 +1221,8 @@ footer nav li {
   color: #fff;
   font-size: 0.875rem;
   letter-spacing: 0.2em;
+  display: inline-block;
+  padding: 10px 40px;
 }
 
 footer ul li img {
@@ -1135,7 +1240,19 @@ footer ul li img {
   margin-top: 50px;
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  footer nav {
+    flex-direction: column-reverse;
+  }
+
+  .instagram {
+    padding: 10px 25px;
+  }
+
+  .logo {
+    display: none;
+  }
+}
 
 
 /* ---howtouse-page------------------------------------- */
@@ -1298,6 +1415,7 @@ li .howto-item-right .howto-text {
 .howto-items .slide-wrap {
   padding-top: 50px;
 }
+
 
 @media (max-width: 768px) {
   .howto-items .wrapper {

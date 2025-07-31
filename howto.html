@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Metaleaf | 一緒に頑張る仲間がいる</title>
-  <meta name="description" content="プログラミング学習生のためのバーチャル作業空間であるメタリーフについて紹介しています" />
+  <title>Metaleaf | メタリーフの活用方法について</title>
+  <meta name="description" content="プログラミング学習生のためのバーチャル作業空間であるメタリーフの活用法について" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" href="img/favicon_metaleaf.png" />
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
   <link rel="stylesheet" href="css/style.css" />
+
   <!-- slickcssを読み込む -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css"
@@ -24,82 +25,84 @@
   <link rel="stylesheet" href="https://use.typekit.net/ggh4pvn.css" />
 </head>
 
-  <body>
-    <!-- --header------------------------------------------------>
-    <header>
-      <h1>
-        <a href="index.html#mv"
-          ><img src="img/logo-text.png" alt="Meta leaf"
-        /></a>
-      </h1>
+<body>
+  <!-- --header------------------------------------------------>
+  <header>
+    <h1>
+      <a href="#mv"><img src="img/logo-text.png" alt="Meta leaf" /></a>
+    </h1>
+    <nav>
       <ul>
-        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="#about">ABOUT</a></li>
         <li><a href="howto.html">HOW</a></li>
-        <li><a href="index.html#voice">VOICE</a></li>
-        <li><a href="index.html#event">EVENT</a></li>
+        <li><a href="#voice">VOICE</a></li>
+        <li><a href="#event">EVENT</a></li>
       </ul>
-    </header>
+    </nav>
+    <div class="toggle_btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
 
-    <!-- howto-main-text-------------------------------- -->
+  <!-- howto-main-text-------------------------------- -->
 
-    <main>
-      <section class="howto-main" id="howto">
-        <div class="howto-main-text">
-          <h2 class="section-title">HOW TO USE？</h2>
-          <p>
-            イベント会場や質問部屋など目的に合わせて<br />
-            活用できるよう色んな部屋を準備しています
-          </p>
-          <p>
-            いままで知らなかった場所、<br />
-            入室するのをためらっていた場所で作業してみると<br />
-            これまでにない出会いや勉強法が見つかるはず！！
-          </p>
-        </div>
-
-        <div class="slide-wrap slide-howto">
-          <div class="slide-text">
-            <span class="slide"
-              >HOW TO USE HOW TO USE HOW TO USE HOW TO USE HOW TO USE</span
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- howto-decoration-bg-icon ---------------------------->
-
-      <div class="bg-icon-howtouse">
-        <ul class="bg-icon-list">
-          <li class="bg-icon-item"><img src="img/anm_boy.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm_kuma.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm_girl.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm_usa.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm-girl3.gif" /></li>
-        </ul>
-        <ul class="bg-icon-list">
-          <li class="bg-icon-item"><img src="img/anm_boy2.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm_usa2.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm-girl2.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm_kuma2.gif" /></li>
-        </ul>
-        <ul class="bg-icon-list">
-          <li class="bg-icon-item"><img src="img/anm_boy.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm_usa.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm_usapink.gif" /></li>
-        </ul>
-        <ul class="bg-icon-list">
-          <li class="bg-icon-item"><img src="img/anm_girl.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm-girl3.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm_boy2.gif" /></li>
-        </ul>
-        <ul class="bg-icon-list">
-          <li class="bg-icon-item"><img src="img/anm_boy2.gif" /></li>
-          <li class="bg-icon-item"><img src="img/anm_girl.gif" /></li>
-        </ul>
+  <main>
+    <section class="howto-main" id="howto">
+      <div class="howto-main-text">
+        <h2 class="section-title">HOW TO USE？</h2>
+        <p>
+          イベント会場や質問部屋など目的に合わせて<br />
+          活用できるよう色んな部屋を準備しています
+        </p>
+        <p>
+          いままで知らなかった場所、<br />
+          入室するのをためらっていた場所で作業してみると<br />
+          これまでにない出会いや勉強法が見つかるはず！！
+        </p>
       </div>
 
-      <!-- howto-items ------------------------------->
+      <div class="slide-wrap slide-howto">
+        <div class="slide-text">
+          <span class="slide">HOW TO USE HOW TO USE HOW TO USE HOW TO USE HOW TO USE</span>
+        </div>
+      </div>
+    </section>
 
+    <!-- howto-decoration-bg-icon ---------------------------->
+
+    <div class="bg-icon-howtouse">
+      <ul class="bg-icon-list">
+        <li class="bg-icon-item"><img src="img/anm_boy.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm_kuma.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm_girl.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm_usa.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm-girl3.gif" /></li>
+      </ul>
+      <ul class="bg-icon-list">
+        <li class="bg-icon-item"><img src="img/anm_boy2.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm_usa2.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm-girl2.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm_kuma2.gif" /></li>
+      </ul>
+      <ul class="bg-icon-list">
+        <li class="bg-icon-item"><img src="img/anm_boy.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm_usa.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm_usapink.gif" /></li>
+      </ul>
+      <ul class="bg-icon-list">
+        <li class="bg-icon-item"><img src="img/anm_girl.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm-girl3.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm_boy2.gif" /></li>
+      </ul>
+      <ul class="bg-icon-list">
+        <li class="bg-icon-item"><img src="img/anm_boy2.gif" /></li>
+        <li class="bg-icon-item"><img src="img/anm_girl.gif" /></li>
+      </ul>
+    </div>
+
+    <!-- howto-items ------------------------------->
       <section class="howto-items">
         <ul class="howto-items wrapper">
           <li>
@@ -168,112 +171,110 @@
               <p class="howto-text">
                 それぞれの学習段階や目的に合わせて、気軽に相談できる環境が整っています。
               </p>
-            </div>
-          </li>
-          <li>
-            <div class="howto-item-left fadein">
-              <img src="img/howtouse-05.png" />
-            </div>
-            <div class="howto-item-right fadein right">
-              <div class="howto-item-title">
-                <p class="howto-item-subtitle">一人で集中したいときに</p>
-                <h3 class="howto-item-maintitle">もくもく集中部屋</h3>
-              </div>
-              <p class="howto-text">
-                ひとりで作業に集中して取り組みたいときはこのもくもく集中部屋！
-              </p>
-              <p class="howto-text">
-                会話はチャットのみを原則としているので作業に集中できます🤫
-              </p>
-            </div>
-          </li>
-          <li>
-            <div class="howto-item-left fadein">
-              <img src="img/howtouse-06.png" />
-            </div>
-            <div class="howto-item-right fadein left">
-              <div class="howto-item-title">
-                <p class="howto-item-subtitle">効率よく勉強する</p>
-                <h3 class="howto-item-maintitle">ポモロード勉強エリア</h3>
-              </div>
-              <p class="howto-text">
-                このエリアはみんなで時間帯を決めて効率よく勉強するエリア。
-              </p>
-              <p class="howto-text">
-                「２５分集中して作業を行い、５分休憩する」というサイクルを繰り返すことで集中力を維持できるといわれています。
-              </p>
-            </div>
-          </li>
-          <li>
-            <div class="howto-item-left fadein">
-              <img src="img/howtouse-07.png" />
-            </div>
-            <div class="howto-item-right fadein right">
-              <div class="howto-item-title">
-                <p class="howto-item-subtitle">おしゃべり・勉強</p>
-                <h3 class="howto-item-maintitle">フリースペース</h3>
-              </div>
-              <p class="howto-text">
-                雑談で息抜きをしたり、協働プロジェクトの話し合いをしたり。
-              </p>
-              <p class="howto-text">
-                音声はONにしたまま各々で作業を進める勉強会など使い方は無限！
-              </p>
-            </div>
-          </li>
-        </ul>
-
-        <div class="btn-wrapper">
-          <a href="index.html#mv" class="btn">
-            <span class="btn-text arrow-right">BACK</span>
-            <span class="btn-text"
-              ><img class="btn-text-img" src="img/back.png"
-            /></span>
-          </a>
-        </div>
-
-        <div class="slide-wrap">
-          <div class="slide-text">
-            <span class="slide">META LEAF META LEAF META LEAF META LEAF </span>
           </div>
+        </li>
+        <li>
+          <div class="howto-item-left fadein">
+            <img src="img/howtouse-05.png" />
+          </div>
+          <div class="howto-item-right fadein right">
+            <div class="howto-item-title">
+              <p class="howto-item-subtitle">一人で集中したいときに</p>
+              <h3 class="howto-item-maintitle">もくもく集中部屋</h3>
+            </div>
+            <p class="howto-text">
+              ひとりで作業に集中して取り組みたいときはこのもくもく集中部屋！
+            </p>
+            <p class="howto-text">
+              会話はチャットのみを原則としているので作業に集中できます🤫
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="howto-item-left fadein">
+            <img src="img/howtouse-06.png" />
+          </div>
+          <div class="howto-item-right fadein left">
+            <div class="howto-item-title">
+              <p class="howto-item-subtitle">効率よく勉強する</p>
+              <h3 class="howto-item-maintitle">ポモロード勉強エリア</h3>
+            </div>
+            <p class="howto-text">
+              このエリアはみんなで時間帯を決めて効率よく勉強するエリア。
+            </p>
+            <p class="howto-text">
+              「２５分集中して作業を行い、５分休憩する」というサイクルを繰り返すことで集中力を維持できるといわれています。
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="howto-item-left fadein">
+            <img src="img/howtouse-07.png" />
+          </div>
+          <div class="howto-item-right fadein right">
+            <div class="howto-item-title">
+              <p class="howto-item-subtitle">おしゃべり・勉強</p>
+              <h3 class="howto-item-maintitle">フリースペース</h3>
+            </div>
+            <p class="howto-text">
+              雑談で息抜きをしたり、協働プロジェクトの話し合いをしたり。
+            </p>
+            <p class="howto-text">
+              音声はONにしたまま各々で作業を進める勉強会など使い方は無限！
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="btn-wrapper">
+        <a href="index.html#mv" class="btn">
+          <span class="btn-text arrow-right">BACK</span>
+          <span class="btn-text"><img class="btn-text-img" src="img/back.png" /></span>
+        </a>
+      </div>
+
+      <div class="slide-wrap">
+        <div class="slide-text">
+          <span class="slide">META LEAF META LEAF META LEAF META LEAF </span>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <!----footer------------------------------------------------>
-    <footer>
-      <!-- <div class="wrapper"> -->
-      <nav>
-        <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="howto.html">HOW</a></li>
-          <li><a href="#voice">VOICE</a></li>
-          <li><a href="#event">EVENT</a></li>
-          <li class="instagram-icon">
-            <div class="kakashi">
-              <a
-                href="https://www.instagram.com/kakashi.programming.lab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                ><img src="img/icon_kakashi.png"
-              /></a>
-              <p>@kakashi</p>
-            </div>
-            <div class="iruka">
-              <a
-                href="https://www.instagram.com/iruka.freelance?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                ><img src="img/icon_ikumi.png"
-              /></a>
-              <p>@iruka</p>
-            </div>
-          </li>
-          <li class="instagram">INSTAGRAM</li>
-        </ul>
-        <img class="logo" src="img/logo01.png" />
-      </nav>
-      <!-- </div> -->
-      <p class="copy">&copy;2025 TEAM_D</p>
-    </footer>
+  <!----footer------------------------------------------------>
+  <footer>
+    <!-- <div class="wrapper"> -->
+    <nav>
+      <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="howto.html">HOW</a></li>
+        <li><a href="#voice">VOICE</a></li>
+        <li><a href="#event">EVENT</a></li>
+        <li class="instagram-icon">
+          <div class="kakashi">
+            <a
+              href="https://www.instagram.com/kakashi.programming.lab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
+                src="img/icon_kakashi.png" /></a>
+            <p>@kakashi</p>
+          </div>
+          <div class="iruka">
+            <a
+              href="https://www.instagram.com/iruka.freelance?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img
+                src="img/icon_ikumi.png" /></a>
+            <p>@iruka</p>
+          </div>
+        </li>
+        <li class="instagram">INSTAGRAM</li>
+      </ul>
+      <img class="logo" src="img/logo01.png" />
+    </nav>
+    <!-- </div> -->
+    <p class="copy">&copy;2025 TEAM_D</p>
+  </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

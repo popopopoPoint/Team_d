@@ -37,17 +37,56 @@ $(function () {
             }
         });
     });
+
+    /*=================================================
+    ハンバーガー
+    ===================================================*/
+
+    $(".toggle_btn").on("click", function () {
+
+        if ($("header").hasClass("open")) {
+
+            $("header").removeClass("open");
+        } else {
+
+            $("header").addClass("open");
+        }
+    });
+
+
+    $('nav a[href^="#"]').on('click', function (e) {
+        const href = $(this).attr('href');
+        const target = $(href);
+
+        if (!target.length) return; // 対象がなければ何もしない
+
+        const headerHeight = $('header').outerHeight();
+        const position = target.offset().top - headerHeight;
+
+        if ($('header').hasClass('open')) {
+            // ハンバーガーメニューが開いているとき → 即ジャンプ
+            e.preventDefault();
+            $('header').removeClass('open');
+
+            // メニュー閉じた後に少し待ってからジャンプ（視覚的に安定）
+            setTimeout(() => {
+                window.scrollTo({
+                    top: position,
+                    behavior: 'auto' // ← スムースにしない
+                });
+            }, 300); // CSS transition のタイミングに合わせて調整可能
+        } else {
+            // 通常時 → スムーススクロール
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: position }, 600);
+        }
+    });
+
+});
+
 /*=================================================
 PICK UP スライダー
 ===================================================*/
-// $('.voice-slide-items').slick({
-//     dots: true,
-//     infinite: true,
-//     speed: 300,
-//     slidesToShow: 1,
-//     centerMode: true,
-//     variableWidth: true
-// });
 $('.voice-slide-items').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
