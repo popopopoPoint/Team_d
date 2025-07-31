@@ -38,7 +38,7 @@ p {
 
 
 .wrapper {
-  padding-inline: 300px;
+  padding-inline: 150px;
   line-height: 1.6;
   letter-spacing: 0.12em;
   margin: 0 auto;
@@ -144,9 +144,11 @@ section {
   .section-title {
     margin-bottom: 30px;
   }
+
   .section-title h2 {
     font-size: 1.6rem;
   }
+
   .section-title p {
     font-size: 0.54rem;
   }
@@ -254,13 +256,22 @@ header {
   background-color: #f8f6f3;
   border-top: 2px solid #000000;
   border-bottom: 2px solid #000000;
-  padding-inline: 40px;
+  /* padding-inline: 40px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  align-items: center;
 }
 
 h1 {
   display: flex;
   align-items: center;
-  border-right: 2px solid #000000;
+  height: 90px;
+  border-right: 2px solid #000;
+  padding-inline: 40px;
+
 }
 
 h1 img {
@@ -270,6 +281,13 @@ h1 img {
 h1 a {
   padding-right: 40px;
   line-height: 1;
+}
+
+header nav {
+  align-items: center;
+  text-align: right;
+  margin-left: auto;
+  padding-right: 50px;
 }
 
 header ul {
@@ -287,29 +305,90 @@ header ul li {
 
 @media (max-width: 768px) {
 
+  h1 {
+    border-right: none;
+  }
 
+  nav {
+    width: 100%;
+    height: 75vh;
+    background: #f8f6f3f1;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    opacity: 0;
+    overflow-y: auto;
+    transition: 0.5s;
+    z-index: 20;
+    text-align: center;
+    visibility: hidden;
 
+  }
 
+  .open nav {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
 
+  nav ul {
+    margin-top: 40px;
+    flex-direction: column;
+  }
 
+  nav ul li {
+    padding: 35px 0;
+    text-align: center;
+  }
 
+  .toggle_btn {
+    width: 40px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    z-index: 20;
+    margin-right: 30px;
+  }
 
+  .toggle_btn span {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #333;
+    transition: .5s;
+    position: absolute;
+  }
 
+  .toggle_btn span:nth-child(1) {
+    top: 28px;
+  }
 
+  .toggle_btn span:nth-child(2) {
+    top: 38px;
+  }
 
+  .toggle_btn span:nth-child(3) {
+    top: 48px;
+  }
 
+  .open .toggle_btn span {
+    background-color: #333;
+  }
 
+  .open .toggle_btn span:nth-child(1) {
+    transform: translateY(5px) rotate(-45deg);
+  }
 
+  .open .toggle_btn span:nth-child(2) {
+    transform: translateY(-5px) rotate(45deg);
+  }
 
-
-
-
-
-
-
-
-
-
+  .open .toggle_btn span:nth-child(3) {
+    opacity: 0;
+    padding-right: 40px;
+  }
 
 }
 
@@ -406,26 +485,7 @@ header ul li {
 }
 
 
-@media (max-width: 768px) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+@media (max-width: 768px) {}
 
 
 /* ---about---------------- */
@@ -616,26 +676,7 @@ header ul li {
 }
 
 
-@media (max-width: 768px) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+@media (max-width: 768px) {}
 
 
 /* scroll-infinity ------------------------*/
@@ -679,17 +720,7 @@ header ul li {
   font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-
-
-
-
-
-
-
-
-
-}
+@media (max-width: 768px) {}
 
 
 /* ---how----------------- */
@@ -841,24 +872,7 @@ header ul li {
 }
 
 
-@media (max-width: 768px) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+@media (max-width: 768px) {}
 
 
 /* ---voice----------------*/
@@ -882,7 +896,8 @@ header ul li {
   max-width: 700px;
   padding: 6%;
   box-sizing: border-box;
-  min-height: 200px; /* 高さを揃える：数値は調整してください */
+  min-height: 200px;
+  /* 高さを揃える：数値は調整してください */
   transition: 0.2s linear;
 }
 
@@ -916,7 +931,8 @@ header ul li {
   background-color: #ffffff;
   border: 1.5px solid #000000;
   padding: 40px 55px;
-  min-height: 200px; /* 高さを揃える：数値は調整してください */
+  min-height: 200px;
+  /* 高さを揃える：数値は調整してください */
 }
 
 .voice-item-left {
@@ -933,7 +949,7 @@ header ul li {
 .voice-item-left .voice-text {
   font-size: 0.75rem;
   margin-bottom: 10px;
-  max-width:380px
+  max-width: 380px
 }
 
 .voice-item-right {
@@ -967,54 +983,56 @@ header ul li {
 }
 
 
-@media (max-width: 768px) {    
+@media (max-width: 768px) {
   .voice-item {
     width: 200px;
     max-width: 100px;
     padding: 2%;
-    min-height: 150px; /* 高さを揃える：数値は調整してください */
+    min-height: 150px;
+    /* 高さを揃える：数値は調整してください */
   }
-  
+
   .voice-num {
     width: 100%;
     padding: 2% 3%;
     font-size: 0.65rem;
   }
-  
+
   .voice-flex {
     padding: 30px 30px;
-    min-height: 1 00px; /* 高さを揃える：数値は調整してください */
+    min-height: 1 00px;
+    /* 高さを揃える：数値は調整してください */
   }
-  
+
   .voice-item-left {
     width: 50%;
   }
-  
+
   .voice-item-left h3 {
     margin-bottom: 10px;
     font-size: 0.1rem;
   }
-  
+
   .voice-item-left .voice-text {
     font-size: 0.75rem;
     margin-bottom: 10px;
-    max-width:380px
+    max-width: 380px
   }
-  
+
   .voice-item-right {
     width: 100%;
   }
-  
+
   .voice-item-right .item-img::before {
     top: 10px;
     left: -10px;
   }
-  
+
   .voice-item-right .item-name {
     font-size: 0.75rem;
     margin-block: 20px;
   }
-  
+
   .voice-slide-items {
     width: 100%;
     height: auto;
@@ -1022,66 +1040,68 @@ header ul li {
     position: relative;
     box-sizing: border-box;
   }
-  
+
   .voice-item {
     width: 100%;
     max-width: 700px;
     padding: 6%;
     box-sizing: border-box;
-    min-height: 200px; /* 高さを揃える：数値は調整してください */
+    min-height: 200px;
+    /* 高さを揃える：数値は調整してください */
     transition: 0.2s linear;
   }
-  
+
   .slick-active {
     transform: translateY(0);
   }
-  
+
   .slick-active:hover {
     rotate: -2deg;
     transform: translateY(-3%);
   }
-  
+
   .voice-num {
-    max-width:80%;
+    max-width: 80%;
     padding: 4% 6%;
     font-size: 0.65rem
   }
-  
+
   .voice-flex {
-    max-width:80%;
+    max-width: 80%;
     display: block;
     padding: 25px 30px;
-    min-height: 130px; /* 高さを揃える：数値は調整してください */
+    min-height: 130px;
+    /* 高さを揃える：数値は調整してください */
   }
-  
+
   .voice-item-left {
     width: 100%;
   }
-  
+
   .voice-item-left h3 {
     margin-bottom: 20px;
     font-size: 0.9rem;
     color: #006666;
     letter-spacing: 0.03em;
   }
-  
+
   .voice-item-left .voice-text {
     font-size: 0.65rem;
     line-height: 1.5em;
     margin-bottom: 10px
   }
-  
+
   .voice-item-right {
-    padding:10px 0 0 10px;
+    padding: 10px 0 0 10px;
     width: 100%;
   }
-  
-  
+
+
   .voice-item-right .item-name {
     font-size: 0.65rem;
     margin-block: 15px 0;
   }
-    
+
 }
 
 /* ---event--------------- */
@@ -1188,23 +1208,7 @@ header ul li {
   padding: 15px 10px;
 }
 
-@media (max-width: 768px) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+@media (max-width: 768px) {}
 
 
 /* decoration-img-music --------- */
@@ -1326,6 +1330,8 @@ footer nav li {
   color: #fff;
   font-size: 0.875rem;
   letter-spacing: 0.2em;
+  display: inline-block;
+  padding: 10px 40px;
 }
 
 footer ul li img {
@@ -1344,15 +1350,17 @@ footer ul li img {
 }
 
 @media (max-width: 768px) {
+  footer nav {
+    flex-direction: column-reverse;
+  }
 
+  .instagram {
+    padding: 10px 25px;
+  }
 
-
-
-
-
-
-
-
+  .logo {
+    display: none;
+  }
 
 
 }
@@ -1517,7 +1525,4 @@ li .howto-item-right .howto-text {
   padding-top: 50px;
 }
 
-@media (max-width: 768px) {
-
-  
-}
+@media (max-width: 768px) {}
