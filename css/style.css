@@ -309,7 +309,7 @@ header ul li {
     border-right: none;
   }
 
-  nav {
+  header nav {
     width: 100%;
     height: 75vh;
     background: #f8f6f3f1;
@@ -333,12 +333,12 @@ header ul li {
     visibility: visible;
   }
 
-  nav ul {
+  header nav ul {
     margin-top: 40px;
     flex-direction: column;
   }
 
-  nav ul li {
+  header nav ul li {
     padding: 35px 0;
     text-align: center;
   }
@@ -884,18 +884,40 @@ header ul li {
 }
 
 .voice-slide-items {
-  max-width: 90vw;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   position: relative;
-  padding-left: 20px;
-  }
+  box-sizing: border-box;
+}
+
+.voice-item {
+  width: 100%;
+  max-width: 700px;
+  padding: 6%;
+  box-sizing: border-box;
+  min-height: 200px;
+  /* 高さを揃える：数値は調整してください */
+  transition: 0.2s linear;
+}
+
+.slick-active {
+  transition: 0.2s linear;
+  transform: translateY(-5%);
+  position: relative;
+}
+
+.slick-active:hover {
+  rotate: -2deg;
+  transform: translateY(-3%);
+}
 
 .voice-num {
-  width: 95%;
+  width: 100%;
   background-color: #ffffff;
   padding: 4% 6%;
   font-size: 0.875rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.5em;
   text-align: right;
   border-top: 1.5px solid #000000;
   border-inline: 1.5px solid #000000;
@@ -903,43 +925,46 @@ header ul li {
 }
 
 .voice-flex {
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
   border: 1.5px solid #000000;
-  padding: 35px 40px;
-}
-.slick-prev:before, .slick-next:before {
-  font-size: 30px;
-  color: black;
+  padding: 40px 55px;
+  min-height: 200px;
+  /* 高さを揃える：数値は調整してください */
 }
 
 .voice-item-left {
-  width: 55%;
+  width: 48%;
 }
+
 .voice-item-left h3 {
   margin-bottom: 20px;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #006666;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.03em;
 }
+
 .voice-item-left .voice-text {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   margin-bottom: 10px;
   max-width: 380px
 }
 
 .voice-item-right {
-  width: 38%;
+  width: 40%;
 }
+
 .voice-item-right .item-img {
   position: relative;
   z-index: 1;
 }
+
 .voice-item-right .item-img img {
   border: 1.5px solid #000000;
 }
+
 .voice-item-right .item-img::before {
   content: "";
   position: absolute;
@@ -951,48 +976,132 @@ header ul li {
   z-index: -1;
   border: 1.5px solid #000000;
 }
+
 .voice-item-right .item-name {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   margin-block: 20px;
 }
 
+
 @media (max-width: 768px) {
   .voice-item {
-    width: 100%
+    width: 200px;
+    max-width: 100px;
+    padding: 2%;
+    min-height: 150px;
+    /* 高さを揃える：数値は調整してください */
   }
 
   .voice-num {
-    width: 95%;
+    width: 100%;
     padding: 2% 3%;
     font-size: 0.65rem;
-    margin: 0 auto;
   }
 
   .voice-flex {
-    width: 95%;
-    padding: 30px 30px  ;
-    margin: 0 auto;
+    padding: 30px 30px;
+    min-height: 1 00px;
+    /* 高さを揃える：数値は調整してください */
   }
+
+  .voice-item-left {
+    width: 50%;
+  }
+
   .voice-item-left h3 {
     margin-bottom: 10px;
-    font-size: 0.87rem;
+    font-size: 0.1rem;
+  }
+
+  .voice-item-left .voice-text {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+    max-width: 380px
+  }
+
+  .voice-item-right {
+    width: 100%;
+  }
+
+  .voice-item-right .item-img::before {
+    top: 10px;
+    left: -10px;
+  }
+
+  .voice-item-right .item-name {
+    font-size: 0.75rem;
+    margin-block: 20px;
+  }
+
+  .voice-slide-items {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .voice-item {
+    width: 100%;
+    max-width: 700px;
+    padding: 6%;
+    box-sizing: border-box;
+    min-height: 200px;
+    /* 高さを揃える：数値は調整してください */
+    transition: 0.2s linear;
+  }
+
+  .slick-active {
+    transform: translateY(0);
+  }
+
+  .slick-active:hover {
+    rotate: -2deg;
+    transform: translateY(-3%);
+  }
+
+  .voice-num {
+    max-width: 80%;
+    padding: 4% 6%;
+    font-size: 0.65rem
+  }
+
+  .voice-flex {
+    max-width: 80%;
+    display: block;
+    padding: 25px 30px;
+    min-height: 130px;
+    /* 高さを揃える：数値は調整してください */
+  }
+
+  .voice-item-left {
+    width: 100%;
+  }
+
+  .voice-item-left h3 {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #006666;
+    letter-spacing: 0.03em;
   }
 
   .voice-item-left .voice-text {
     font-size: 0.65rem;
-    margin-bottom: 10px;
+    line-height: 1.5em;
+    margin-bottom: 10px
   }
+
+  .voice-item-right {
+    padding: 10px 0 0 10px;
+    width: 100%;
+  }
+
+
   .voice-item-right .item-name {
-    font-size: 0.55rem;
-    margin-block: 20px;
+    font-size: 0.65rem;
+    margin-block: 15px 0;
   }
-  
-  .slick-prev{
-    margin-left: 20px;
-  }
-  .slick-next{
-    margin-right: 15px;
-  }
+
 }
 
 /* ---event--------------- */
@@ -1099,7 +1208,19 @@ header ul li {
   padding: 15px 10px;
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .event-list {
+    width: 100%;
+  }
+
+  .event-item {
+    align-items: center;
+  }
+}
 
 
 /* decoration-img-music --------- */
@@ -1252,6 +1373,8 @@ footer ul li img {
   .logo {
     display: none;
   }
+
+
 }
 
 
@@ -1270,6 +1393,8 @@ footer ul li img {
 }
 
 .howto-main h2 {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
   font-size: 2.1rem;
   color: #006666;
   letter-spacing: 0.03em;
@@ -1278,6 +1403,8 @@ footer ul li img {
 .howto-main p {
   margin-bottom: 40px;
 }
+
+@media (max-width: 768px) {}
 
 
 /* howto-animation ---------------------------- */
@@ -1296,7 +1423,6 @@ footer ul li img {
   display: flex;
   overflow: hidden;
   background-color: #f8f6f3;
-  padding-top: 40px;
 }
 
 .bg-icon-list {
@@ -1313,17 +1439,10 @@ footer ul li img {
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .bg-icon-howtouse {
-    padding-top: 0px;
-  }
-}
-
 /* howto-items -------------------------------------- */
 
-.howto-items .wrapper {
-  padding: 100px 0 0;
-  max-width: 1000px;
+.howto-items {
+  padding-top: 100px;
 }
 
 .howto-items li {
@@ -1363,11 +1482,11 @@ li .howto-item-left::before {
 }
 
 li .howto-item-left {
-  width: 42%;
+  width: 45%;
 }
 
 li .howto-item-right {
-  width: 49%;
+  width: 45%;
 }
 
 li .howto-item-right .howto-item-title {
@@ -1388,6 +1507,7 @@ li .howto-item-right .howto-item-subtitle {
   color: #ffffff;
   border: 1px solid #000000;
   border-bottom: none;
+  font-weight: 700;
 }
 
 li .howto-item-right .howto-item-maintitle {
@@ -1400,6 +1520,7 @@ li .howto-item-right .howto-item-maintitle {
   color: #000000;
   border: 1px solid #000000;
   box-shadow: 5px 5px 0px 2px #006666;
+  font-weight: 700;
 }
 
 li .howto-item-right .howto-text {
@@ -1416,70 +1537,4 @@ li .howto-item-right .howto-text {
   padding-top: 50px;
 }
 
-
-@media (max-width: 768px) {
-  .howto-items .wrapper {
-    padding: 50px 60px;
-    max-width: 1000px;
-  }
-
-  .howto-items li {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-bottom: 130px;
-  }
-
-  .howto-items li:nth-child(2),
-  .howto-items li:nth-child(4),
-  .howto-items li:nth-child(6) {
-    flex-direction: column-reverse;
-  }
-  .howto-items li:nth-child(7) {
-    margin-bottom: 100px;
-  }
-
-
-  li .howto-item-left {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  li .howto-item-right {
-    width: 100%;
-    margin: 0 auto 15px;
-  }
-
-  li .howto-item-right .howto-item-title {
-    padding-left: 15px;
-  }
-
-  li .howto-item-right .howto-item-subtitle {
-    font-size: 0.65rem;
-    padding: 0px 10px;
-  }
-
-  li .howto-item-right .howto-item-maintitle {
-    margin-bottom: 30px;
-    font-size: 0.875rem;
-    padding: 7px 15px;
-  }
-
-  li .howto-item-right .howto-text {
-    margin-bottom: 15px;
-    max-width: 90%;
-    margin-inline: auto;
-  }
-
-  .howto-items .btn-text-img {
-    width: 180px;
-    margin-top: 7px;
-  }
-
-  .howto-items .slide-wrap {
-    padding-top: 50px;
-  }
-  .howto-items .btn-text-img {
-    width: 130px;
-    margin-top: 3px;
-  }
-}
+@media (max-width: 768px) {}

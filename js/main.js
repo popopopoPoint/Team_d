@@ -103,4 +103,4 @@ $('.voice-slide-items').slick({
       }
     ]
   });
-});
+
