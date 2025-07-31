@@ -37,17 +37,6 @@ $(function () {
             }
         });
     });
-    /*=================================================
-    PICK UP スライダー
-    ===================================================*/
-    $('.voice-slide-items').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        centerMode: true,
-        variableWidth: true
-    });
 
     /*=================================================
     ハンバーガー
@@ -93,4 +82,25 @@ $(function () {
         }
     });
 
+});
+
+/*=================================================
+PICK UP スライダー
+===================================================*/
+$('.voice-slide-items').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  
+    responsive: [
+      {
+        breakpoint: 768, // 画面幅が768px以下になったら
+        settings: {
+          slidesToShow: 1, // 1枚表示に変更
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
 });
