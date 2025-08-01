@@ -5,6 +5,7 @@ body {
     "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, 游ゴシック, YuGothic,
     sans-serif;
   font-optical-sizing: auto;
+  font-weight: 700;
 }
 
 img {
@@ -49,7 +50,11 @@ p {
     padding-inline: 85px;
   }
 }
-
+@media screen and (max-width: 425px) {
+  .wrapper {
+    padding-inline: 30px;
+  }
+}
 
 /*----fade-------------- */
 .fadein {
@@ -128,9 +133,8 @@ p {
 }
 
 section {
-  padding-block: 100px;
+  padding-block: 130px;
   background-color: #f8f6f3;
-  font-weight: 700;
   font-size: 0.75rem;
   color: #f698e0;
 }
@@ -149,6 +153,11 @@ section {
   }
 }
 
+@media screen and (max-width: 425px) {
+  section {
+    padding-block: 80px;
+  }
+}
 /* ---btn-------------- */
 .btn-wrapper {
   text-align: center;
@@ -334,7 +343,7 @@ header ul li {
     position: relative;
     cursor: pointer;
     z-index: 20;
-    margin-right: 60px;
+    margin-right: 40px;
   }
 
   .toggle_btn span {
@@ -389,6 +398,7 @@ header ul li {
 
 .mv-frame {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   margin: 0 auto;
   box-sizing: content-box;
@@ -416,7 +426,7 @@ header ul li {
 }
 .mv-text h2 img {
   width: 300px;
-  margin: 0 10px 10px -5px;
+  margin: 0 10px 5px -5px;
 }
 .mv-text p {
   font-family: "Noto Sans JP";
@@ -440,21 +450,20 @@ header ul li {
   position: relative;
   width: 48%;
 }
-.bg-pc {
-  display: block;
-  margin: 0 auto;
-  width: 80%;
+.bg-pc{
+  height: auto;
 }
 .mv-img video {
   position: absolute;
-  width: 70%;
-  bottom: 34%;
-  left: 14%;
+  width: 90%;
+  top:5%;
+  left: 5%;
 }
+
 .img-1 {
   position: absolute;
   left: 10%;
-  bottom: -20px;
+  bottom: -40px;
   width: 150px;
 }
 .img-2 {
@@ -468,6 +477,7 @@ header ul li {
 /* タブレット */
 @media (min-width: 768px) and (max-width: 1024px) {
   /* タブレット向けのスタイル */
+
   .mv-frame {
     width: 85%;
   }
@@ -487,15 +497,12 @@ header ul li {
   /* モバイル向けのスタイル */
   .mv-frame {
     flex-direction: column;
-    width: 70%;
+    width: 75%;
   }
   .mv-text,
   .mv-img {
     width: 100%;
     text-align: center;
-  }
-  .mv-img video {
-    top: 15%;
   }
   .mv-text h2 img {
     width: 200px;
@@ -510,18 +517,33 @@ header ul li {
   .img-1 {
     position: absolute;
     left: 10%;
-    bottom: -20px;
+    bottom: -15px;
     width: 100px;
   }
   .img-2 {
     position: absolute;
     right: 10%;
-    bottom: -10px;
+    bottom: 10px;
     width: 100px;
     animation: bounce 1s infinite ease-in-out;
   }
 }
 
+@media screen and (max-width: 425px) {
+  .mv {
+    padding-block: 130px 50px;
+  }
+  .mv-text {
+    padding-block: 30px;
+  }
+  .mv-text h2 {
+    font-size: 1.2rem;
+  }
+  .mv-text p {
+    font-size: 0.875rem;
+    letter-spacing: 0.18em;
+  }
+}
 /* ---about---------------- */
 .about {
   border-block: 1.5px solid #000000;
@@ -536,6 +558,11 @@ header ul li {
   padding-bottom: 80px ;
 }
 
+.about p{
+  margin-bottom: 20px;
+  max-width: 550px;
+  line-height: 2.2em;
+}
 .meta-link {
   color: #006666;
 }
@@ -586,11 +613,12 @@ header ul li {
 }
 
 .about-icon-yurayura {
-  width: 140px;
+  width: 120px;
   position: absolute;
   top: -40%;
-  left: 18%;
+  left: 20%;
   transform-origin: center bottom;
+  transition: 0.3x;
 }
 
 .about-icon-yurayura:hover {
@@ -610,16 +638,15 @@ header ul li {
 }
 
 .about-icon-girls {
-  width: 250px;
+  width: 200px;
   position: absolute;
   top: 9%;
-  left: -9%;
 }
 
 .about-icon_kuruma {
-  width: 130px;
+  width: 120px;
   position: absolute;
-  animation: anim 1s infinite;
+  animation: anim 1.5s infinite;
 }
 
 @keyframes anim {
@@ -633,23 +660,23 @@ header ul li {
 }
 
 .about-icon_kuma {
-  width: 120px;
+  width: 100px;
   position: absolute;
-  top: 10%;
+  top: 20%;
   right: 0;
 }
 
 .about-icon_kou {
-  width: 145px;
+  width: 120px;
   position: absolute;
   left: -4%;
 }
 
 .about-icon_point {
-  width: 145px;
+  width: 120px;
   position: absolute;
   top: -5%;
-  left: 35%;
+  left: 40%;
 }
 
 .emoji-cracker {
@@ -685,7 +712,7 @@ header ul li {
   border-radius: 7px;
   background-color: #ffffff;
   text-align: left;
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 400;
   line-height: 1.5;
   color: #000000;
@@ -707,11 +734,10 @@ header ul li {
     flex-direction: column;
     width: 100%;
   }
-
   .about-text {
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
   }
 
   .about-description {
@@ -721,6 +747,16 @@ header ul li {
   .about-contain {
     width: 100%;
   }
+}
+@media screen and (max-width: 425px) {
+  .about-text {
+    padding-bottom: 50px;
+  }
+
+  li.about-circle_center,.about-circle_bottom{
+    display: none;
+  }
+  
 }
 
 /* scroll-infinity ------------------------*/
@@ -741,7 +777,6 @@ header ul li {
 
 .scroll-infinity_list {
   display: flex;
-  list-style: none;
   align-items: center;
 }
 
@@ -750,7 +785,7 @@ header ul li {
 }
 
 .scroll-infinity_item {
-  width: calc(100vw / 12);
+  margin-right: 10px;
 }
 
 .scroll-infinity_item>img {
@@ -758,12 +793,20 @@ header ul li {
 }
 
 .scroll-infinity_list p {
-  font-family: "futura-pt", sans-serif;
-  font-weight: 700;
   width: 200px;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
+@media screen and (max-width: 425px) {
+  .about-text {
+    padding-bottom: 50px;
+  }
+
+  li.about-circle_center,.about-circle_bottom{
+    display: none;
+  }
+
+}
 /* ---how----------------- */
 
 .how-tree{
@@ -772,6 +815,8 @@ header ul li {
 
 .how-contain {
   position: relative;
+  max-width: 700px;
+  margin: 0 auto ;
 }
 
 .how-tree-img {
@@ -791,11 +836,9 @@ header ul li {
   border: 2px solid #000000;
   background-color: #ffffff;
   text-align: center;
-  font-family: "Noto Sans JP";
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.5;
-  color: #000000;
+  transition: 0.3s;
 }
 
 .speech_bubble1::before {
@@ -830,9 +873,8 @@ header ul li {
   text-align: center;
   font-family: "Noto Sans JP";
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.5;
-  color: #000000;
+  transition: 0.3s;
 }
 
 .speech_bubble2::before {
@@ -887,13 +929,13 @@ header ul li {
   }
 
 .how-text {
-  font-size: 0.9rem;
   text-align: center;
   padding-block: 25px;
 }
 
 .how-text span {
   background: linear-gradient(transparent 60%, #f698e0 50%);
+
 }
 
 @media (min-width: 768px) and (max-width: 996px) {
@@ -911,7 +953,6 @@ header ul li {
   .how-tree-img {
     background-position: bottom center;
   }
-
   .bubble1 {
     top: 30%;
     left: 0;
@@ -921,6 +962,27 @@ header ul li {
     top: 20%;
     right: 0;
   }
+}
+
+@media screen and (max-width: 425px) {
+
+  .speech_bubble1 ,.speech_bubble2{
+    padding: 8px;
+    font-size: 0.875rem;
+  }
+  .bubble1 {
+    top: 50px;
+  }
+  .bubble2 {
+    top: 0%;
+  }
+  .bubble3 {
+    top: 80px;
+  }
+
+.how-tree-img {
+  height: 320px;
+}
 }
 
 /* ---voice----------------*/
@@ -965,6 +1027,7 @@ header ul li {
 
 .voice-item-left {
   width: 55%;
+  min-height: 250px;
 }
 .voice-item-left h3 {
   margin-bottom: 20px;
@@ -975,7 +1038,7 @@ header ul li {
 .voice-item-left .voice-text {
   font-size: 0.7rem;
   margin-bottom: 10px;
-  max-width: 380px
+  max-width: 350px
 }
 
 .voice-item-right {
@@ -1058,10 +1121,9 @@ header ul li {
   display: flex;
   border-bottom: 1px solid;
   padding: 30px 20px;
-  font-family: "futura-pt", sans-serif;
-  font-weight: 700;
   font-size: 1rem;
   color: #006666;
+  align-items: center;
 }
 
 .event-item:hover {
@@ -1074,7 +1136,7 @@ header ul li {
 }
 
 .event-date {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .event-info span {
@@ -1082,7 +1144,7 @@ header ul li {
   color: #f8f6f3;
   font-size: 0.75rem;
   display: block;
-  padding: 3px;
+  line-height: 2.5;
 }
 
 .event-text {
@@ -1120,8 +1182,6 @@ header ul li {
   width: 200px;
   border-radius: 25px;
   text-align: center;
-  font-family: "futura-pt", sans-serif;
-  font-weight: 700;
   font-size: 1rem;
   letter-spacing: 4px;
   margin: 0 auto;
@@ -1174,11 +1234,11 @@ header ul li {
 .suggstion-btn-1 {
   width: 120px;
   background-color: #006666;
-  border-radius: 50px;
+  border-radius: 10px;
   text-align: center;
   color: #fff;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
 .speech-music {
@@ -1247,6 +1307,7 @@ footer {
 footer nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 footer nav li {
@@ -1257,14 +1318,15 @@ footer nav li {
 .instagram-icon {
   display: flex;
   margin-top: 20px;
-  justify-content: space-between;
 }
 
 .kakashi ,.iruka{
-  margin-right: 20px;
   text-align: center;
   font-weight: 100;
   line-height: 0.1rem;
+}
+.kakashi {
+  margin-right: 15px;
 }
 
 .instagram {
@@ -1283,8 +1345,7 @@ footer ul li img {
 }
 
 .logo {
-  width: 250px;
-  object-fit: cover;
+  width: 15%;
 }
 
 .copy {
@@ -1296,6 +1357,10 @@ footer ul li img {
 @media (max-width: 768px) {
   footer nav {
     flex-direction: column-reverse;
+    margin: 0;
+  }
+  footer nav ul{
+    text-align: center;
   }
 
   .instagram {
@@ -1312,7 +1377,7 @@ footer ul li img {
 
 .howto-main {
   text-align: center;
-  padding-top: 150px;
+  padding-top: 250px;
   position: relative;
 }
 
