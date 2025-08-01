@@ -1,4 +1,3 @@
-
 $(function () {
 
     /*=================================================
@@ -15,9 +14,8 @@ $(function () {
         // 600はスクロール速度で単位はミリ秒  swingはイージングのひとつ
         $("html, body").animate({ scrollTop: position }, 1000, "swing");
         // urlが変化しないようにfalseを返す
-        e.preventDefault();
-        return false;
-    });
+            return false;
+        });
     /*=================================================
      sectionタイトルのゆっくり出現
      ===================================================*/
@@ -55,9 +53,10 @@ $(function () {
     });
 
 
-    $('nav a[href^="#"]','nav a[href^=""]').on('click', function (e) {
+    $('nav a[href^="#"]').on('click', function (e) {
         const href = $(this).attr('href');
         const target = $(href);
+  e.preventDefault(); // ←ここで止めないと即ジャンプしてしまう
 
         if (!target.length) return; // 対象がなければ何もしない
 
@@ -83,24 +82,26 @@ $(function () {
         }
     });
 
-    /*=================================================
-    PICK UP スライダー
-    ===================================================*/
-    $('.voice-slide-items').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-
-        responsive: [
-            {
-                breakpoint: 1000, // 画面幅が768px以下になったら
-                settings: {
-                    slidesToShow: 1, // 1枚表示に変更
-                    slidesToScroll: 1,
-                }
-            }
-        ]
-    });
-
 });
+
+/*=================================================
+PICK UP スライダー
+===================================================*/
+$('.voice-slide-items').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  
+    responsive: [
+      {
+        breakpoint: 768, // 画面幅が768px以下になったら
+        settings: {
+          slidesToShow: 1, // 1枚表示に変更
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  });
+
+

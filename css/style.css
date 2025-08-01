@@ -383,7 +383,6 @@ header ul li {
     opacity: 0;
     padding-right: 40px;
   }
-
 }
 
 /*---mv---------- */
@@ -734,6 +733,8 @@ header ul li {
     flex-direction: column;
     width: 100%;
   }
+
+
   .about-text {
     width: 100%;
     margin: 0 auto;
@@ -1383,7 +1384,7 @@ footer ul li img {
 
 .slide-howto {
   position: absolute;
-  top: 84%;
+  top: 70%;
 }
 
 .howto-main h2 {
