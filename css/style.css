@@ -38,11 +38,11 @@ p {
 }
 
 .wrapper {
-  padding-inline: 150px;
   line-height: 1.6;
   letter-spacing: 0.12em;
-  margin: 0 auto;
-  width: 100%;
+  margin-inline: auto;
+  padding-inline: 2%;
+  max-width: 1200px;
 }
 
 @media screen and (max-width: 768px) {
@@ -82,7 +82,7 @@ p {
   white-space: nowrap;
   font-size: 14rem;
   color: #fffccd;
-  font-weight: 700;
+  background-color: #f8f6f3;
 }
 
 .slide-text {
@@ -1375,16 +1375,13 @@ footer ul li img {
 
 
 /* ---howtouse-page------------------------------------- */
-
+.howto-main-text{
+  padding-inline: 30px;
+}
 .howto-main {
   text-align: center;
   padding-top: 250px;
-  position: relative;
-}
-
-.slide-howto {
-  position: absolute;
-  top: 90%;
+  padding-inline: 0;
 }
 
 .howto-main h2 {
@@ -1410,10 +1407,16 @@ footer ul li img {
   }
 }
 
+.slides{
+  position: relative;
+  overflow: hidden;
+}
 .bg-icon-howtouse {
   display: flex;
   overflow: hidden;
-  background-color: #f8f6f3;
+  position: absolute;
+  bottom:20%;
+  z-index: 5;
 }
 
 .bg-icon-list {
@@ -1431,11 +1434,9 @@ footer ul li img {
 }
 
 /* howto-items -------------------------------------- */
-
-.howto-items {
-  padding-top: 100px;
+.how-items{
+  background-color: #f8f6f3;
 }
-
 .howto-items li {
   display: flex;
   justify-content: space-between;
