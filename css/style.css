@@ -1384,7 +1384,7 @@ footer ul li img {
 
 .slide-howto {
   position: absolute;
-  top: 70%;
+  top: 90%;
 }
 
 .howto-main h2 {
@@ -1593,4 +1593,10 @@ li .howto-item-right .howto-text {
     width: 130px;
     margin-top: 3px;
   }
+
+  .slide-howto {
+  top: 100%;
 }
+
+}
+
